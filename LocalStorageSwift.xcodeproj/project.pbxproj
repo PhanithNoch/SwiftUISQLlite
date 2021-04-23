@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		8488631726328A8200FF9BF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488631626328A8200FF9BF8 /* ContentView.swift */; };
 		8488631926328A8300FF9BF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488631826328A8300FF9BF8 /* Assets.xcassets */; };
 		8488631C26328A8300FF9BF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488631B26328A8300FF9BF8 /* Preview Assets.xcassets */; };
+		8488632626328FCD00FF9BF8 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 8488632526328FCD00FF9BF8 /* SQLite */; };
+		8488632A26328FF800FF9BF8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488632926328FF800FF9BF8 /* UserModel.swift */; };
+		8488632E2632904A00FF9BF8 /* DB_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488632D2632904A00FF9BF8 /* DB_Manager.swift */; };
+		84886332263290B400FF9BF8 /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84886331263290B400FF9BF8 /* AddUserView.swift */; };
+		848863362632937600FF9BF8 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848863352632937600FF9BF8 /* EditUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		8488631826328A8300FF9BF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8488631B26328A8300FF9BF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8488631D26328A8300FF9BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8488632926328FF800FF9BF8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8488632D2632904A00FF9BF8 /* DB_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Manager.swift; sourceTree = "<group>"; };
+		84886331263290B400FF9BF8 /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
+		848863352632937600FF9BF8 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488632626328FCD00FF9BF8 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +46,9 @@
 		8488630826328A8200FF9BF8 = {
 			isa = PBXGroup;
 			children = (
+				84886330263290AC00FF9BF8 /* Views */,
+				8488632D2632904A00FF9BF8 /* DB_Manager.swift */,
+				8488632826328FE300FF9BF8 /* Models */,
 				8488631326328A8200FF9BF8 /* LocalStorageSwift */,
 				8488631226328A8200FF9BF8 /* Products */,
 			);
@@ -69,6 +82,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8488632826328FE300FF9BF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8488632926328FF800FF9BF8 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84886330263290AC00FF9BF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84886331263290B400FF9BF8 /* AddUserView.swift */,
+				848863352632937600FF9BF8 /* EditUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +115,9 @@
 			dependencies = (
 			);
 			name = LocalStorageSwift;
+			packageProductDependencies = (
+				8488632526328FCD00FF9BF8 /* SQLite */,
+			);
 			productName = LocalStorageSwift;
 			productReference = 8488631126328A8200FF9BF8 /* LocalStorageSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 8488630826328A8200FF9BF8;
+			packageReferences = (
+				8488632426328FCD00FF9BF8 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 8488631226328A8200FF9BF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8488631726328A8200FF9BF8 /* ContentView.swift in Sources */,
+				8488632A26328FF800FF9BF8 /* UserModel.swift in Sources */,
+				84886332263290B400FF9BF8 /* AddUserView.swift in Sources */,
+				848863362632937600FF9BF8 /* EditUserView.swift in Sources */,
 				8488631526328A8200FF9BF8 /* LocalStorageSwiftApp.swift in Sources */,
+				8488632E2632904A00FF9BF8 /* DB_Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8488632426328FCD00FF9BF8 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8488632526328FCD00FF9BF8 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8488632426328FCD00FF9BF8 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8488630926328A8200FF9BF8 /* Project object */;
 }
